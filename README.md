@@ -28,15 +28,34 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Open quartus II and create New project wizard.
+2. Write the program in Verilog HDL file and run the program.
+3. Download the RTL viewer
+4. Now open university program VWF and download waveform after the execution.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: John Wilfred Thomas J W
+Register Number: 24013517
 */
+module exp_6(T,clk,Q,Qbar);
+input T,clk; 
+output reg Q; 
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk) begin Q=(T&(~Q))|((~T)&Q);
+Qbar=~Q; 
+end endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
+![image](https://github.com/user-attachments/assets/464bb440-4a59-49e8-bb89-119ace5c153d)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![image](https://github.com/user-attachments/assets/da242b12-c4be-4da5-ad79-f8f4356c2d50)
 
 **RESULTS**
+
+Thus the Flip flop designed and the truth tables is verified using Quartus software.
+
+
